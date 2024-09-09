@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+}
+
+#table1 {
+    padding: 10px;
+}
+thead{
+    font-weight: bolder;
+    color:#000;
+}
