@@ -1,0 +1,50 @@
+*{   
+    
+}
+#container1{
+    background-color: #F1F1F1;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+
+}
+#container2{
+    background-color: #F1F1F1;
+    padding: 20px;
+    width: 50%;
+    margin:auto;
+}
+
+fieldset{
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-style: none;
+}
+ul{
+    list-style: none;
+}
+li{
+    padding: 5px;
+}
+input, select{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px black solid;
+
+}
+
+input:hover, select:hover{
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+
+h1{
+    background-color: #4494C9;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5em;
+
+    box-shadow: 5px 2px 2px black;
+}
+

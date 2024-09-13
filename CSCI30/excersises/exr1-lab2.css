@@ -2,10 +2,20 @@
     margin: 0;
 }
 
-#table1 {
-    padding: 10px;
+table {
+    border-collapse: collapse;
 }
-thead{
+
+table tr td:nth-child(1), table tr:last-child,thead{
     font-weight: bolder;
-    color:#000;
+
+}
+tfoot td{
+    font-weight: bolder;
+
+}
+td{
+    padding: 8px;
+    border: 1px black solid;
+
 }
