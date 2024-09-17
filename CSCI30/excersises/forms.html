@@ -17,15 +17,21 @@
                 <ul>
                     <li>
                         <label for="first_name">First Name:</label>
-                        <input type="text" placeholder="First Name" name="fname" id="first_name" required>
+                        <input type="text" placeholder="First Name" name="fname" id="first_name" required minlength="1">
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="last_name">Last Name:</label>
                         <input type="text" placeholder="Last Name" name="lname" id="last_name" required>
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="city_name">City:</label>
                         <input type="text" placeholder="Enter City" name="city" id="city_name" required>
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="state_name">Select State:</label>
@@ -36,18 +42,24 @@
                             <option value="TX">Texas</option>
                             <option value="NM">New Mexico</option>
                         </select>
+
                     </li>
                     <li>
                         <label for="zip_code">Zipcode:</label>
-                        <input type="text" placeholder="Zipcode" name="zcode" id="zip_code" required>
+                        <input type="text" placeholder="xxxxx" name="zcode" id="zip_code" required maxlength="5" minlength="5">
+                        <span></span>
                     </li>
                     <li>
                         <label for="birth_date">DOB:</label>
-                        <input type="text" placeholder="mm/dd//yyyy" name="DOB" id="birth_date" required>
+                        <input type="text" placeholder="mm/dd/yyyy" name="DOB" id="birth_date" required maxlength="10" pattern="(0[1-9]|1[0-2])/(0[0-9]|[12][0-9]|3[0-2])/\d{4}">
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="phone_num">Phone Number:</label>
-                        <input type="text" placeholder="xxx-xxx-xxxx" name="pnum" id="phone_num" required>
+                        <input type="text" placeholder="xxx-xxx-xxxx" name="pnum" id="phone_num" required pattern="\d{3}-\d{3}-\d{4}" maxlength="12" minlength="12">
+                        <span></span>
+
                     </li>
                 </ul>
             </fieldset>
@@ -59,24 +71,28 @@
                 <ul>
                     <li>
                         <label for="card_info">Card Number:</label>
-                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" name="cinfo" id="card_info" required>
+                        <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" name="cinfo" id="card_info" required pattern="\d{4}-\d{4}-\d{4}-\d{4}" maxlength="19" minlength="19">
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="exp_date">Expiration Date::</label>
-                        <input type="text" placeholder="mm/yy" name="expdate" id="exp_date" required>
+                        <input type="text" placeholder="mm/yy" name="expdate" id="exp_date" required pattern="(0[0-9]|1[0-2])/\d{2}" minlength="5">
+                        <span></span>
+
                     </li>
                     <li>
                         <label for="cvs_num">Security Number:</label>
-                        <input type="text" placeholder="xxx" name="cvsnum" id="cvs_num" required>
+                        <input type="text" placeholder="xxx" name="cvsnum" id="cvs_num" required pettern="\d{3}" minlength="3" maxlength="3">
+                        <span></span>
+
                     </li>
                 </ul>
             </fieldset>
             </div>
-
-            <fieldset>
-                
-            </fieldset>
-
+            <div id="container3">
+                <input type="submit" name="submitform" id="submit-form">
+            </div>
             </form>
         </article>
     
