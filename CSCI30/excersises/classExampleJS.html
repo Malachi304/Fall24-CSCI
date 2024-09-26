@@ -8,12 +8,14 @@
 <body>
 
     <section id="container">
-        <input type=int id="n"><br>
+        <input type="text" id="n"><br>
         <input type="button" value="ok" onclick="btn_ok()"><br>
-        <input type="button" value="reset" onclick="btn.reset()"><br>
+        <input type="button" value="reset" onclick="btn_reset()"><br>
 
 
         <div id="fib-funct"></div>
+        <div id="div_table"></div>
+
     </section>
     
 </body>
@@ -22,7 +24,20 @@
 
 function btn_ok(){
    let n = document.getElementById('n').value;
-   document.getElementById('fib-funct').innerHTML("f("+n+") =" + fib(n));
+   document.getElementById('fib-funct').innerHTML=("f("+n+") =" +fib(n));
+
+
+   let str="";
+   str="<table>";
+   str+= "<tr><td>n</td><td>fib(n)</td></tr>";
+
+   for(let i = 0; i <= n; i++){
+    str+="<tr><td>" + i + "</td><td>" + fib(i) + "</td></td<\n>"
+   }
+
+   str+= "/table"
+   document.getElementById("div_table").innerHTML = str; 
+
 
 }
 
@@ -40,7 +55,8 @@ function fib(num){
 }
 
 function btn_reset(){
-    document.getElementById('function').innerHTML=" "
+    document.getElementById('fib-funct').innerHTML=" "
+    document.getElementById('div_table').innerHTML=""
 }
 
 </script>

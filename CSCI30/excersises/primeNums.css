@@ -1,9 +1,26 @@
+#container{
+    margin: auto;
+}
+
+input{
+    padding: 10px;
+
+}
+
 table{
     border-collapse: collapse;
     margin-top: 5px;
+    box-shadow: 5px 2px black;
+
 }
+
 
 tr, td, th{
     border: 2px black solid;
     padding: 8px; 
+    background-color: lightblue;
+}
+
+th{
+    background-color: red;
 }
