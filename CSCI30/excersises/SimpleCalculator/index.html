@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div id="container">
+      <div id = "calculator">
+        <div id="screen">
+            <div id="content"></div>
+            <div id="old-content"></div>
+        </div>
+        <div id="buttons">
+            <ul id="buttons">
+                <li class="top-util" onclick="clear_content()">C</li>
+                <li class="top-util">-/+</li>
+                <li class="top-util" onclick="button_push(' % ')">%</li>
+                <li class="operation" onclick="button_push(' / ')">/</li>
+                <li class="num" onclick="button_push(7)">7</li>
+                <li class="num" onclick="button_push(8)">8</li>
+                <li class="num" onclick="button_push(9)">9</li>
+                <li class="operation" onclick="button_push(' * ')">X</li>
+                <li class="num" onclick="button_push(4)">4</li>
+                <li class="num" onclick="button_push(5)">5</li>
+                <li class="num" onclick="button_push(6)">6</li>
+                <li class="operation" onclick="button_push(' - ')">-</li>
+                <li class="num" onclick="button_push(1)">1</li>
+                <li class="num" onclick="button_push(2)">2</li>
+                <li class="num" onclick="button_push(3)">3</li>
+                <li class="operation" onclick="button_push(' + ')">+</li>
+
+                <li id="zero" onclick="button_push(0)">0</li>
+                <li id="dot-operation" onclick="button_push('.')">.</li>
+                <li id="equal" onclick="button_push(0)">=</li>
+            </ul>
+        </div>
+        </div>
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

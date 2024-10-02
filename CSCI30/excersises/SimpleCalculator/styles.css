@@ -1,0 +1,93 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: thin;
+    background-color: #A8A8A8;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+}
+#container{
+    height: 100%;
+ 
+}
+#calculator{
+    width: 275px;
+    background: black;
+    padding:5px;
+    border-radius: 10px;
+    box-shadow: 2px 3px white;
+
+    margin: 10vh auto;
+}
+#screen{
+    background-color: black;
+    font-size: 16px;
+    text-align: end;
+    height: 75px;
+    text-align: left;
+    padding: 5px;
+    font-size: 40px;
+
+    position: relative;
+
+}
+#content{
+    background-color: black;
+    color:#fff
+}
+#old-content{
+    width: 100%;
+    height: 2vh;
+    font-size: 10px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+#buttons{
+    color: #fff;
+ 
+}
+#buttons #buttons{
+    width: 100%;
+    background-color: black;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; /* Space between items */;
+
+}
+
+
+ul li{
+    font-weight: bolder;
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #333;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.top-util{
+    background-color: #A8A8A8;
+
+}
+.top-util:hover{
+    background-color: grey;
+}
+.operation, #equal{
+    background-color: #FFA212;
+}
+.operation:hover, .num:hover, #dot-operation:hover, #zero:hover, #equal:hover{
+    background-color: grey;
+}
