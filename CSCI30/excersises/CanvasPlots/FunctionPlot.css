@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+
+#plot{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+}

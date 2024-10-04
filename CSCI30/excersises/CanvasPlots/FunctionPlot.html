@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="FunctionPlot.css" rel="stylesheet">
+    <title>Function Plot Form</title>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Function Plot </h1>
+        <h2>f(x) = a3x^3 + a2x^2 + a1x + a0</h2>
+        <form>
+
+            <table>
+                <tr><td>    
+                    <lable for="a3">a3: </lable>
+                    <input id="a3" type="text"></input>
+                </td></tr>
+
+                <tr><td>
+                    <lable for="a2">a2: </lable>
+                    <input id="a2" type="text"></input>
+                </td></tr>
+
+                <tr><td>
+                    <lable for="a1">a1: </lable>
+                    <input id="a1" type="text"></input>
+                </td></tr>
+                <tr><td>
+                    <lable for="a0">a0: </lable>
+                    <input id="a0" type="text"></input>
+                </td></tr>
+            </table>
+
+            <table>
+                <tr><td>    
+                    <lable for="Xmin">xMin: </lable>
+                    <input id="Xmin" type="text"></input>
+                </td></tr>
+
+                <tr><td>
+                    <lable for="Xmax">xMax: </lable>
+                    <input id="Xmax" type="text"></input>
+                </td></tr>
+
+                <tr><td>
+                    <lable for="x">x: </lable>
+                    <input id="x" type="text"></input>
+                </td></tr>
+
+                <tr><td>
+                    <lable for="n">n: </lable>
+                    <input id="n" type="text"></input>
+                </td></tr>
+                <tr><td>
+                    <lable for="Display-axis">Display-axis: </lable>
+                    <input id="Display-axis" type="checkbox" onclick="compute()"></input>
+                </td></tr>
+            </table>
+        
+        </form>
+
+        <canvas id="myCanvas"></canvas>
+    </div>
+    
+</body>
+<script src="FunctionPlot.js"></script>
+</html>
