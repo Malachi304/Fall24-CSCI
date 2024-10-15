@@ -20,6 +20,7 @@ function addRow(){
         row.insertCell(0).innerHTML= rowCount;
         row.insertCell(1).innerHTML= calculatePrimeNums(rowCount);
 
+
     }
 
 }

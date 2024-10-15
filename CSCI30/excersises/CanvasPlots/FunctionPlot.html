@@ -10,7 +10,12 @@
 
     <div id="container">
         <h1>Function Plot </h1>
-        <h2>f(x) = a3x^3 + a2x^2 + a1x + a0</h2>
+        <h2>f(x) = <math>
+            <msup><mi>a3x</mi><mn>3</mn></msup>
+            <msup><mi>+ a2x</mi><mn>2</mn></msup>
+            <mi>+ a1x</mi>
+            <mi>+ a0</mi>
+        </math></h2>
         <form>
 
             <table>
@@ -46,23 +51,21 @@
                 </td></tr>
 
                 <tr><td>
-                    <lable for="x">x: </lable>
-                    <input id="x" type="text"></input>
-                </td></tr>
-
-                <tr><td>
                     <lable for="n">n: </lable>
                     <input id="n" type="text"></input>
                 </td></tr>
                 <tr><td>
                     <lable for="Display-axis">Display-axis: </lable>
-                    <input id="Display-axis" type="checkbox" onclick="compute()"></input>
+                    <input id="Display-axis" type="checkbox" onclick="user_function()"></input>
                 </td></tr>
             </table>
         
         </form>
 
-        <canvas id="myCanvas"></canvas>
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+
+        <textarea name="" id="myTextarea" cols="30" rows="10"></textarea>
+
     </div>
     
 </body>

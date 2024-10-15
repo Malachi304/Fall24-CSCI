@@ -19,8 +19,23 @@ body{
 
 form{
     display: flex;
-    margin-top: 20px;
+    margin-top: 0;
     border: 2px solid black;
+    padding: 5px;
+
+}
+form tr{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 2px;
+}
+form input{
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 5px;
+}
+form input:hover{
+    background-color: whitesmoke;
 }
 
 #plot{
@@ -28,3 +43,21 @@ form{
     width: 50px;
     background-color: red;
 }
+h1{
+    margin-bottom: 10px;
+}
+h2{
+    border: 2px solid black;
+    border-bottom: none;
+    background-color: red;
+    padding: 5px;
+}
+
+  
+textarea {
+    width: 100%;
+    min-height: 30rem;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }

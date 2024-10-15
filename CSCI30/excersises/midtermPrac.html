@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Practice</title>
+</head>
+
+<style>
+
+    td{
+        background-color: grey;
+        width: 25px;
+        height: 25px;
+
+        border:  1px solid black;
+        margin: 0px;
+        padding: 0px;
+    }
+    tr{
+        margin: 0px;
+        padding: 0px;
+    }
+    td:hover{
+        background-color: lightgray;
+    }
+
+    li{
+        list-style: none;
+    }
+ 
+</style>
+
+<body>
+
+    <h1>Midterm 1 Practice : Dynamic Tables, Reg Expressions, etc..</h1>
+    <hr>
+
+    <!--Basic Dyanmic Table with delete Row option-->
+    <section id="Dynamic-table">
+
+        <table>
+            <tr>
+                <th><input type="number" id="quantity" placeholder="Row Quantity"></th>
+                <th><input type="number" id="value" placeholder="Row Value"></th>
+                <th><input type="button" value="Add" onclick="addRow()"></th>
+            </tr>
+        </table>
+
+        <table id="myTable">
+            <tr>
+                <th>Row Quantity</th>
+                <th>Row Value</th>
+            </tr>
+        </table>
+    </section>
+    <hr>
+
+    <!--To Practice with dynamic tables, I'll implement table updates based on Mindsweaper difficulty level-->
+    <section id="Mindsweaper-table">
+        
+        <h2>Mindsweaper Dyanmic Table</h2>
+        <ul>
+
+            <li><input type="button" value="Easy" onclick="gameMode(1)"></li>
+            <li><input type="button" value="Medium" onclick="gameMode(2)"></li>
+            <li><input type="button" Value="Hard" onclick="gameMode(3)"></li>
+
+        </ul>
+
+        <!--Create Table-->
+        <table id="myTable1" style="display: none"></table>
+        <button type="button" id="reset-table" style="display: none" onclick="clear_table()">Remove</button>
+    </section>
+    <hr>
+    
+</body>
+<script>
+
+// ===========================================================================================
+// Baisc Dynamic Table
+// ===========================================================================================
+let table = document.getElementById('myTable'); // We need the table
+let row_amount = document.getElementById('quantity'); // Amount of rows we want to add
+let row_value = document.getElementById('value'); // The value each cell will have
+
+function addRow(){
+    for(i = 0; i < row_amount.value; i++){
+    
+        let row = table.insertRow(); // Insert a new Row
+
+        // Insert columns (cells) for row
+        row.insertCell(0).innerHTML = i;  // Index
+        row.insertCell(1).innerHTML = '<input type="button" value="Delete" onclick="deleteRow(this)">';
+        row.insertCell(2).innerHTML = row_value.value; 
+
+    }
+}
+
+// ===========================================================================================
+// Mindsweaper Dynamic Board
+// ===========================================================================================
+let table1 = document.getElementById('myTable1');
+function gameMode(mode){
+
+    clear_table();
+    // let rowCount = table.rows.length; 
+    switch (mode){
+        // Easy 8x8
+        case 1:
+            create_table(8,8)
+            break;
+        // Medium 16x16
+        case 2:
+            create_table(16,16)
+            break
+        // Hard 30x16
+        case 3:
+            create_table(16, 30)
+            break; 
+    }
+
+    table1.style.display='block';
+    document.getElementById('reset-table').style.display='block'; 
+
+}
+
+function create_table (x, y){
+    for(i = 0; i < x; i++){
+               let newRow = table1.insertRow(i);
+               for(z = 0; z < y; z++){
+                newRow.insertCell();
+            }
+        }
+}
+
+function clear_table(){
+    let rowCount = table1.rows.length; 
+
+        for (let i = rowCount - 1; i >= 0; i--) {
+        table1.deleteRow(i);
+    }
+    document.getElementById('reset-table').style.display='none'; 
+
+}
+
+</script>
+</html>
