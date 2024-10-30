@@ -73,6 +73,25 @@
         <button type="button" id="reset-table" style="display: none" onclick="clear_table()">Remove</button>
     </section>
     <hr>
+
+    <!--This section is all about forms and Regular expressions-->
+    <section id="regular-expressions">
+
+        <form id="myForm">
+
+            <h1>My Form</h1>
+            <label for="name">Name: </label><br>
+            <input type="text" id="name" vlaue="First Name"><br>
+            <label for="date">Date: </label><br>
+            <input type="text" id="date" value="mm/dd/yyyy"><br>
+            <label for="Pnum">Phone Number: </label><br>
+            <input type="text" id="Pnum" value="xxx-xxx-xxxx"><br>
+            <label for="Pnum">Social Security Number (SSN): </label><br>
+            <input type="text" id="ssn" value="xxxx-xxxx-xxxx-xxxx"><br>
+
+        </form>
+
+    </section>
     
 </body>
 <script>
@@ -90,11 +109,19 @@ function addRow(){
         let row = table.insertRow(); // Insert a new Row
 
         // Insert columns (cells) for row
-        row.insertCell(0).innerHTML = i;  // Index
+        row.insertCell(0).innerHTML = table.rows.length - 1;  // Index
         row.insertCell(1).innerHTML = '<input type="button" value="Delete" onclick="deleteRow(this)">';
         row.insertCell(2).innerHTML = row_value.value; 
 
     }
+}
+
+// Delete specific Row function
+function deleteRow(obj){
+    // Since obj is a BTN, parent node is <td>, and parent node of <td> is <tr>
+    let row_index = obj.parentNode.parentNode.rowIndex;
+    table.deleteRow(row_index); 
+
 }
 
 // ===========================================================================================

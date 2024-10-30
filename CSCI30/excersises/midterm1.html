@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" placeholder="(question 1) enter x" id="x">
+    <input type="button" value="add" onclick="question1()"> <br>
+
+    <input type="number" placeholder="(question 2) enter f(x)" id="fx">
+    <input type="button" value="add" onclick="question2()"> <br>
+    
+    
+    <input type="button" value="Run question 3 in console" onclick="question3()">    <br>
+
+    <input type="button" value="Run question 4 in console" onclick="question4()">    <br>
+
+
+    <input type="button" value="Run question 5 (JSON) in console" onclick="question5()">    <br>
+
+
+
+    <hr>
+    <h1>Form Question</h1>
+    <form id="form-question" style="border: 3px black">
+
+
+        <input type="number" id="main_input" placeholder="Input Number">
+        <input type="button" value="OK" onclick="question1()"> <br>
+
+
+        <input type="button" value="Dynamic Table" onclick="dynamTable()"> <br>
+        <table id="dynamTable" style="display: none">
+
+            <tr>
+                <th>INDEX: x</th>
+                <th>FUNCTION: f(x)<th>
+            </tr>
+        </table>
+
+
+
+    </form>
+
+
+</body>
+
+<script>
+
+    //1. Create a JavaScript function that returns f(x)=2*x^2-20*x-6  with x given as an input.  (0.5 point)
+    function question1(){
+        let x = document.getElementById('x'); 
+        let ans = 2*(x.value**2) - (20*x.value-6);
+        console.log(ans);
+        
+        return ans; 
+    }
+
+    //2. Create a JavaScript function that returns an array containing the values of f(x) for values from -n to n, with n given as an input.  (0.5 point)
+    function question2(){
+        let x = document.getElementById("fx");
+        let xprime = x.value*-1; 
+        let ans = new Array; 
+        for(let i = xprime; i <= x.value; i ++){
+
+            ans.push(i);
+
+        }
+
+        console.log(ans);
+        return ans; 
+
+    }
+
+    //3. Create a JavaScript function to reverse the elements in an array. (0.25 point)
+    function question3(){
+        let input=[1,2,3,4,5];
+        var ret = new Array;
+    for(var i = input.length-1; i >= 0; i--) {
+        ret.push(input[i]);
+    }
+    console.log(ret);
+    return ret;
+    }
+
+
+
+    function question4(){
+        var arr = [2,4,5,3,1];
+        console.log("unsorted: "+ arr); 
+        var result=[];
+
+        for(i=0; i<arr.length; i++){
+
+        for(j=0; j<arr.length; j++){
+                if(arr[i]>arr[j+1]){
+
+                }
+            }
+        }
+            console.log( "sorted: "+ result );
+    }
+    //5. Create a JavaScript function to display the JSON representation of the array in an HTML section.   (0.5 point)
+    function question5(){
+        let array = ['1', '2', '3', '4'];
+ 
+        console.log("JSON: "+ JSON.stringify(array));
+        console.log("ARRAY: " + array);
+        return; JSON.stringify(array);  
+    }
+
+    function dynamTable(){
+        let table = document.getElementById('dynamTable'); 
+        let x = document.getElementById('main_input');
+        let arr = question3(x.value); 
+
+        for(i = 0; i < arr.length; i++){
+    
+        let row = table.insertRow(); // Insert a new Row
+
+        // Insert columns (cells) for row
+        row.insertCell(0).innerHTML = table.rows.length - 1;  // Index
+        row.insertCell(1).innerHTML = arr[i]; 
+        }
+        
+        table.style.display='block';
+    }
+
+    function clear_table(){
+    let rowCount = table.rows.length; 
+
+        for (let i = rowCount - 1; i >= 0; i--) {
+        table1.deleteRow(i);
+    }
+    document.getElementById('reset-table').style.display='none'; 
+
+}
+</script>
+</html>
